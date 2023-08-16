@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
-import From from '@components/Form';
+import Form from '@components/Form';
 
 const CreatePrompt = () => {
   const [ submitting, setSubmitting ] = useState(false);
@@ -17,7 +17,13 @@ const CreatePrompt = () => {
   };
 
   return (
-   <Form />
+   <Form
+    type="Create"
+    post={post}
+    setPost={setPost}
+    submitting={submitting}
+    handleSubmit={createPrompt}
+   />
   )
 }
 
