@@ -9,6 +9,7 @@ import { get } from "mongoose";
 const Nav = () => {
   const isUserLoggedIn = true;
   const [providers, setProviders] = useState(null);
+  const [toggleDrowpdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
     const setProviders = async () => {
@@ -78,8 +79,19 @@ const Nav = () => {
               height={37}
               className="rounded-full"
               alt="profile"
-              onClick={() => {}}
+              onClick={() => setToggleDropdown((prev) => !prev)}
             />
+            {toggleDrowpdown && (
+              <div className="dropdown">
+                <Link
+                  href="/profile"
+                  className="dropdwon_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  My Profile
+                </Link>
+              </div>
+            )}
           </div>
         ) : (
           <>
