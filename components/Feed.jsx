@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, {useState, useEffect}  from 'react';
 
 const Feed = () => {
   return (
