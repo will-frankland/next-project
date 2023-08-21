@@ -4,6 +4,14 @@ import React, {useState, useEffect}  from 'react';
 
 import PromptCard from './PromptCard';
 
+const PromptCardList = ({ data, handleTagClick }) => {
+  return (
+    <div className='mt-16 prompt_layout'>
+
+    </div>
+  )
+};
+
 const Feed = () => {
 
   const [searchText, setSearchText] = useState('');
@@ -23,11 +31,12 @@ const Feed = () => {
           required
           className='search_input peer'
         >
-        
         </input>
-
       </form>
-      
+      <PromptCardList
+        data={[]}
+        handleTagClick={() => {}}
+      />
     </section>
   )
 }
