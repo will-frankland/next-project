@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 import Profile from "@components/Profile";
 
 const MyProfile = () => {
+  const router = useRouter();
   const { data: session } = useSession();
   const [myPosts, setMyPosts] = useState([]);
-  console.log(session);
+  // console.log(session);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -19,9 +20,11 @@ const MyProfile = () => {
     if (session?.user.id) fetchPosts();
   }, []);
 
-  const handleEdit = () => {};
+  const handleEdit = (post) => {
+    router.push(`/update-prompt?id=${post._id}`)
+  };
 
-  const handleDelete = async () => {};
+  const handleDelete = async (post) => {};
 
   return (
     <Profile
