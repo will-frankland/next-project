@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Screenshots
 
-!["Screenshot of Homepage"](https://github.com/will-frankland/next-project/blob/main/docs/homepage.png?raw=true)
+![Screenshot of Homepage](docs/homepage.png)
 !["Screenshot of Create Post Page"](https://github.com/will-frankland/next-project/blob/main/docs/createPostPage.png?raw=true)
 !["Screenshot of Mobile View showing Menu"](https://github.com/will-frankland/next-project/blob/main/docs/mobileCompatability.png?raw=true)
 !["Screenshot of Profile Page"](https://github.com/will-frankland/next-project/blob/main/docs/myProfilePage.png?raw=true)
